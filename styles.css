@@ -1,0 +1,234 @@
+:root {
+    --primary: #d946ef;
+    --secondary: #ec4899;
+    --highlight: #facc15;
+    --bg: #fff7f7;
+    --text: #1f2937;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  header {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  nav h1 {
+    font-size: 1.8rem;
+  }
+  
+  nav ul {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: var(--highlight);
+  }
+  
+  section {
+    text-align: center;
+    padding: 4rem 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+  }
+  
+  
+  section.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #hero {
+    background: linear-gradient(-45deg, #d946ef, #ec4899, #f472b6, #facc15);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+  }
+  
+  @keyframes gradientShift {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+  }
+  
+  ul li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .highlight {
+    background: var(--highlight);
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.4rem;
+  }
+  
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+  
+  
+  .skill-tags span {
+    background: #f3e8ff;
+    color: #9333ea;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+  
+  .skill-tags span:hover {
+    background: #e9d5ff;
+  }
+  
+  .project-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .project-links a {
+    display: inline-block;
+    margin: 0.5rem 0.5rem;
+    background: var(--secondary);
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .project-links a:hover {
+    background: #db2777;
+    transform: scale(1.05);
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  
+  .social-icons a {
+    margin: 0 0.6rem;
+    font-size: 1.6rem;
+    color: var(--primary);
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.2);
+    color: var(--secondary);
+  }
+  
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    animation: fadeInUp 1s ease-in-out;
+    text-align: center;
+  }
+  
+  .profile-img {
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    object-position: center top;
+    border: 5px solid var(--primary);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease-in-out;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  
+  
+  .profile-img:hover {
+    transform: scale(1.05);
+  }
+  
+  .about-text {
+    max-width: 700px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #374151;
+  }
+  
+  @media (min-width: 768px) {
+    .about-container {
+      flex-direction: row;
+      justify-content: center;
+      text-align: left;
+    }
+  
+    .about-text {
+      padding-left: 2rem;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background: #1f1b24;
+    color: white;
+    font-weight: 500;
+  }
+  
+  
+  
+  
